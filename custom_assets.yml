@@ -1,175 +1,174 @@
-# see. https://pqrs.org/osx/karabiner/json.html#typical-complex_modifications-examples
-# and also. http://yaml.org/spec/
-title: "setminami custom karabiner assetes"
-rules:
-  # item array
-  - description: "⇧ + '_' to international backslash for HHKB ja"
-    manipulators:
-      - type: "basic"
-        from:
-          key_code: "international1"
-          modifiers:
-            mandatory:
-              - "shift"
-        to:
-          - key_code: "international3"
+# see. http://yaml.org/spec/
+# https://pqrs.org/osx/karabiner/json.html#typical-complex_modifications-examples
+  title: "setminami custom karabiner assetes"
+  rules:
+    - description: "⇧ + '_' to international backslash for HHKB ja"
+      manipulators:
+        - type: "basic"
+          from:
+            key_code: "international1"
             modifiers:
-              - "option"
-  - description: "Duplicate ⇧ + space to '=' key"
-    manipulators:
-      - from:
-          key_code: "spacebar"
-          modifiers:
-            mandatory:
-              - "shift"
-            optional:
-              - "any"
-        to:
-          - key_code: "keypad_equal_sign"
-        type: "basic"
-  - description: "Extend BS/Del W/R and U/O to BS/Del"
-    manipulators:
-      - from:
-          key_code: "w"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "delete_or_backspace"
-        type: "basic"
-      - from:
-          key_code: "r"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "delete_forward"
-        type: "basic"
-      - from:
-          key_code: "u"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "delete_or_backspace"
-        type: "basic"
-      - from:
-          key_code: "o"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "delete_forward"
-        type: "basic"
-  - description: "Extend Enter key SW fn + G/H to Enter keys"
-    manipulators:
-      - from:
-          key_code: "h"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "return_or_enter"
-        type: "basic"
-      - from:
-          key_code: "g"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "return_or_enter"
-        type: "basic"
-  - description: "Extend Diamond SW_fn + E/S/D/F, I/J/K/L to ↑←↓→ keys"
-    manipulators:
-      - from:
-          key_code: "e"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "up_arrow"
-        type: "basic"
-      - from:
-          key_code: "s"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "left_arrow"
-        type: "basic"
-      - from:
-          key_code: "d"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "down_arrow"
-        type: "basic"
-      - from:
-          key_code: "f"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "right_arrow"
-        type: "basic"
-      - from:
-          key_code: "i"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "up_arrow"
-        type: "basic"
-      - from:
-          key_code: "j"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "left_arrow"
-        type: "basic"
-      - from:
-          key_code: "k"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "down_arrow"
-        type: "basic"
-      - from:
-          key_code: "l"
-          modifiers:
-            mandatory:
-              - "fn"
-            optional:
-              - "any"
-        to:
-          - key_code: "right_arrow"
-        type: "basic"
+              mandatory:
+                - "shift"
+          to:
+            - key_code: "international3"
+              modifiers:
+                - "option"
+    - description: "Duplicate ⇧ + space to '=' key"
+      manipulators:
+        - from:
+            key_code: "spacebar"
+            modifiers:
+              mandatory:
+                - "shift"
+              optional:
+                - "any"
+          to:
+            - key_code: "keypad_equal_sign"
+          type: "basic"
+    - description: "Extend erase: SW_fn + W/R and U/O to BS/Del"
+      manipulators:
+        - from:
+            key_code: "w"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "delete_or_backspace"
+          type: "basic"
+        - from:
+            key_code: "r"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "delete_forward"
+          type: "basic"
+        - from:
+            key_code: "u"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "delete_or_backspace"
+          type: "basic"
+        - from:
+            key_code: "o"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "delete_forward"
+          type: "basic"
+    - description: "Extend Enter: SW_fn + C/M to Enter key"
+      manipulators:
+        - from:
+            key_code: "c"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "return_or_enter"
+          type: "basic"
+        - from:
+            key_code: "m"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "return_or_enter"
+          type: "basic"
+    - description: "Extend Diamond: SW_fn + E/S/D/F, I/J/K/L to ↑←↓→ keys"
+      manipulators:
+        - from:
+            key_code: "e"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "up_arrow"
+          type: "basic"
+        - from:
+            key_code: "s"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "left_arrow"
+          type: "basic"
+        - from:
+            key_code: "d"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "down_arrow"
+          type: "basic"
+        - from:
+            key_code: "f"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "right_arrow"
+          type: "basic"
+        - from:
+            key_code: "i"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "up_arrow"
+          type: "basic"
+        - from:
+            key_code: "j"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "left_arrow"
+          type: "basic"
+        - from:
+            key_code: "k"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "down_arrow"
+          type: "basic"
+        - from:
+            key_code: "l"
+            modifiers:
+              mandatory:
+                - "fn"
+              optional:
+                - "any"
+          to:
+            - key_code: "right_arrow"
+          type: "basic"

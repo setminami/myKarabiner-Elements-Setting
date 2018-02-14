@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# macOS Only
 if [ $# != 1 ]; then
   echo 'help -- $1 must be modifier file path'
   exit 1
@@ -8,15 +8,15 @@ elif [ -e `pwd`/$1 ]; then
   EXT=${PROF##*.}
   echo $EXT
   if [ $EXT = 'yml' -o $EXT = 'yaml' ]; then
-    if ! type yaml2json > /dev/null 2>&1; then
-      if ! type npm > /dev/null 2>&1; then
-        echo 'I will use npm. please setup NodeJS env.'
+    if ! type remarshal > /dev/null 2>&1; then
+      if ! type brew > /dev/null 2>&1; then
+        echo 'I will use homebrew. please setup brew env. https://brew.sh/'
         exit 1
       fi
-      npm install -g yaml2json
+      brew install remarshal
     fi
     JSON=${PROF%.*}.json
-    yaml2json $PROF > JSON
+    yaml2json $PROF > $JSON
   else
     JSON=$PROF
   fi
