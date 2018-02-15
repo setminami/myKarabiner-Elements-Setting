@@ -16,7 +16,10 @@ elif [ -e `pwd`/$1 ]; then
       brew install remarshal
     fi
     JSON=${PROF%.*}.json
-    yaml2json $PROF > $JSON
+    if ! yaml2json $PROF > $JSON; then
+      echo 'Maybe' $PROF 'has something wrong...'
+      exit 1
+    fi
   else
     JSON=$PROF
   fi

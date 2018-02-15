@@ -2,7 +2,7 @@
 # https://pqrs.org/osx/karabiner/json.html#typical-complex_modifications-examples
   title: "setminami custom karabiner assetes"
   rules:
-    - description: "⇧ + '_' to international backslash for HHKB ja"
+    - description: "5: ⇧ + '_' to international backslash (for HHKB ja)"
       manipulators:
         - type: "basic"
           from:
@@ -14,7 +14,7 @@
             - key_code: "international3"
               modifiers:
                 - "option"
-    - description: "Duplicate ⇧ + space to '=' key"
+    - description: "4: Duplicate ⇧ + space to '=' key"
       manipulators:
         - from:
             key_code: "spacebar"
@@ -26,7 +26,7 @@
           to:
             - key_code: "keypad_equal_sign"
           type: "basic"
-    - description: "Extend erase: SW_fn + W/R and U/O to BS/Del"
+    - description: "3: Extend erase: SW_fn + W/R and U/O to BS/Del"
       manipulators:
         - from:
             key_code: "w"
@@ -68,7 +68,7 @@
           to:
             - key_code: "delete_forward"
           type: "basic"
-    - description: "Extend Enter: SW_fn + C/M to Enter key"
+    - description: "2: Extend Enter: SW_fn + C/M to Enter key"
       manipulators:
         - from:
             key_code: "c"
@@ -90,7 +90,7 @@
           to:
             - key_code: "return_or_enter"
           type: "basic"
-    - description: "Extend Diamond: SW_fn + E/S/D/F, I/J/K/L to ↑←↓→ keys"
+    - description: "1: Extend Diamond: SW_fn + E/S/D/F, I/J/K/L to ↑←↓→ keys"
       manipulators:
         - from:
             key_code: "e"
