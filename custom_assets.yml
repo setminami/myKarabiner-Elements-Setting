@@ -2,6 +2,20 @@
 # https://pqrs.org/osx/karabiner/json.html#typical-complex_modifications-examples
   title: "setminami custom karabiner assetes"
   rules:
+    - description: "6: ⇧ + 'ろ' to kana 'ー' (for HHKB ja)"
+      manipulators:
+        - type: "basic"
+          from:
+            key_code: "international1"
+            modifiers:
+              mandatory:
+                - "shift"
+          to:
+            - key_code: "international3"
+          conditions:
+            - type: "input_source_if"
+              input_sources:
+                - language: "ja"
     - description: "5: ⇧ + '_' to international backslash (for HHKB ja)"
       manipulators:
         - type: "basic"
@@ -14,6 +28,10 @@
             - key_code: "international3"
               modifiers:
                 - "option"
+          conditions:
+            - type: "input_source_if"
+              input_sources:
+                - language: "en"
     - description: "4: Duplicate ⇧ + space to '=' key"
       manipulators:
         - from:
